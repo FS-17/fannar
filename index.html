@@ -138,16 +138,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="swiper hero-swiper h-[600px] animate__animated animate__fadeIn">
+    <div class="swiper h-[550px] animate__animated">
       <div class="swiper-wrapper">
         <!-- Slide 1 -->
         <div class="swiper-slide relative">
-          <img
+          <!-- <img
             src="https://images.unsplash.com/photo-1590959914819-b767b9fe4cfb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="الحرف اليدوية السعودية"
             class="w-full h-full object-cover"
-          />
-          <div class="absolute inset-0 bg-black bg-opacity-40">
+          /> -->
+          <!-- make it a color -->
+          <div class="bg-[#264653] w-full h-full"></div>
+
+          <div class="absolute inset-0 bg-black bg-opacity-50">
             <div class="container mx-auto px-6 h-full flex items-center">
               <div
                 class="text-white max-w-lg animate__animated animate__fadeInRight"
@@ -163,12 +166,6 @@
                   >
                     كُن حِرفي واشترك الآن
                   </a>
-                  <a
-                    href="/courses.html"
-                    class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition duration-300"
-                  >
-                    تعلم الحرف
-                  </a>
                 </div>
               </div>
             </div>
@@ -176,31 +173,6 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="swiper-slide relative">
-          <img
-            src="/api/placeholder/1920/600"
-            alt="دورات الحرف اليدوية"
-            class="w-full h-full object-cover"
-          />
-          <div class="absolute inset-0 bg-black bg-opacity-40">
-            <div class="container mx-auto px-6 h-full flex items-center">
-              <div
-                class="text-white max-w-lg animate__animated animate__fadeInRight"
-              >
-                <h1 class="text-5xl font-bold mb-4">تعلم من الحرفيين</h1>
-                <p class="text-xl mb-8">
-                  دورات تدريبية مباشرة مع أمهر الحرفيين السعوديين
-                </p>
-                <a
-                  href="/courses.html"
-                  class="bg-[#E76F51] hover:bg-[#d65f42] text-white font-bold py-3 px-8 rounded-lg transition duration-300"
-                >
-                  اكتشف الدورات
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -209,7 +181,8 @@
     <section
       class="py-16 relative"
       style="
-        background-image: url('aboutimage.jpeg');
+        background: linear-gradient(to bottom, #264653 0%, transparent 30%),
+          url('aboutimage.jpeg');
         background-position: center;
         background-repeat: repeat;
       "
