@@ -1,0 +1,61 @@
+:root {
+  --primary: #b53240;
+  --secondary: #e76f51;
+  --accent: #e9c46a;
+  --dark: #264653;
+  --light: #f4f1de;
+}
+
+body {
+  font-family: "Noto Sans Arabic", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Amiri", serif;
+}
+
+.geometric-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30L30 0L60 30L30 60Z' fill='%23b53240' fill-opacity='0.1'/%3E%3C/svg%3E");
+}
+
+/* Swiper Custom Styles */
+.swiper-pagination-bullet-active {
+  background: var(--light) !important;
+}
+
+/* Mobile Menu Styles */
+#mobile-menu {
+  transition: all 0.3s ease-in-out;
+  transform-origin: top;
+}
+
+#mobile-menu.hidden {
+  opacity: 0;
+  transform: scaleY(0);
+  display: block !important;
+  visibility: hidden;
+  height: 0;
+}
+
+#mobile-menu:not(.hidden) {
+  opacity: 1;
+  transform: scaleY(1);
+  visibility: visible;
+  height: auto;
+}
+
+.mobile-menu-icon,
+.mobile-menu-close {
+  transition: opacity 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

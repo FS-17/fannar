@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدورات - فنّار</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="flex-shrink-0 flex items-center">
+              <span class="text-2xl font-bold text-gray-800 mr-3">فنّار</span>
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-700 hover:text-[#b53240]"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  class="mobile-menu-icon"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+                <path
+                  class="mobile-menu-close hidden"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Desktop menu -->
+          <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+            <a
+              href="/virtual-workshop.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+              >المعمل الافتراضي</a
+            >
+            <a
+              href="/market.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+              >سوق الحرفيين</a
+            >
+            <a
+              href="/courses.html"
+              class="text-[#b53240] font-bold px-3 py-2 rounded-md"
+              >الدورات</a
+            >
+            <a
+              href="/academies.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+              >الأكاديميات</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="/virtual-workshop.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+            >المعمل الافتراضي</a
+          >
+          <a
+            href="/market.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+            >سوق الحرفيين</a
+          >
+          <a
+            href="/courses.html"
+            class="block text-[#b53240] font-bold px-3 py-2 rounded-md"
+            >الدورات</a
+          >
+          <a
+            href="/academies.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+            >الأكاديميات</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div
+      class="bg-[#264653] text-white py-16"
+      style="
+        background-image: url('https://osbu-oic.org/wp-content/uploads/2025/01/4012394908.png');
+        background-blend-mode: overlay;
+        background-size: cover;
+      "
+    >
+      <div class="container mx-auto px-6">
+        <h1
+          class="text-5xl font-bold mb-6 animate__animated animate__fadeInDown"
+        >
+          دورات الحرف اليدوية
+        </h1>
+        <p
+          class="text-xl text-gray-300 mb-8 animate__animated animate__fadeInUp"
+        >
+          تعلم الحرف التقليدية على يد أمهر الحرفيين السعوديين
+        </p>
+      </div>
+    </div>
+
+    <!-- Filters Section -->
+    <section class="py-8 border-b">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-wrap gap-4 items-center justify-between">
+          <!-- Level Filters -->
+          <div class="flex gap-2">
+            <button class="bg-[#b53240] text-white px-4 py-2 rounded-lg">
+              الكل
+            </button>
+            <button class="bg-white hover:bg-gray-100 px-4 py-2 rounded-lg">
+              مبتدئ
+            </button>
+            <button class="bg-white hover:bg-gray-100 px-4 py-2 rounded-lg">
+              متوسط
+            </button>
+            <button class="bg-white hover:bg-gray-100 px-4 py-2 rounded-lg">
+              متقدم
+            </button>
+          </div>
+
+          <!-- Sort -->
+          <select class="bg-white border rounded-lg px-4 py-2">
+            <option>الأحدث</option>
+            <option>الأكثر شعبية</option>
+            <option>السعر: من الأقل</option>
+            <option>السعر: من الأعلى</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Course Card 1 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeInUp"
+          >
+            <img
+              src="https://modo3.com/thumbs/fit630x300/266505/1692599402/%D8%A3%D8%AF%D9%88%D8%A7%D8%AA_%D8%B5%D9%86%D8%A7%D8%B9%D8%A9_%D8%A7%D9%84%D9%81%D8%AE%D8%A7%D8%B1.jpg"
+              alt="دورة الفخار"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-4">
+                <span
+                  class="bg-[#E9C46A] text-gray-800 px-3 py-1 rounded-full text-sm"
+                  >مبتدئ</span
+                >
+                <span class="text-[#E76F51] font-bold">8 أسابيع</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">أساسيات صناعة الفخار</h3>
+              <p class="text-gray-600 mb-4">
+                تعلم أسس صناعة الفخار التقليدي مع الأستاذ محمد العمري
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-[#b53240] font-bold text-xl">799 ر.س</span>
+                  <span class="text-gray-500 line-through mr-2">999 ر.س</span>
+                </div>
+                <button
+                  class="bg-[#b53240] text-white px-6 py-2 rounded-lg hover:bg-[#871a25] transition duration-300"
+                >
+                  سجل الآن
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 2 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeInUp"
+          >
+            <img
+              src="https://igtsservice.com/uploads/files/59985_1693765712.jpg"
+              alt="دورة الخط العربي"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-4">
+                <span
+                  class="bg-[#b53240] text-white px-3 py-1 rounded-full text-sm"
+                  >متوسط</span
+                >
+                <span class="text-[#E76F51] font-bold">10 أسابيع</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">فن الخط العربي</h3>
+              <p class="text-gray-600 mb-4">
+                تعلم أصول وقواعد الخط العربي مع الخطاط أحمد الراشد
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-[#b53240] font-bold text-xl">999 ر.س</span>
+                  <span class="text-gray-500 line-through mr-2">1,299 ر.س</span>
+                </div>
+                <button
+                  class="bg-[#b53240] text-white px-6 py-2 rounded-lg hover:bg-[#871a25] transition duration-300"
+                >
+                  سجل الآن
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 3 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeInUp"
+          >
+            <img
+              src="https://cdn.salla.sa/lRrbn/cpBdYiveQARoKzhwYdaU8oZatPWY4kwk5IOUdboF.jpg"
+              alt="دورة السدو"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-4">
+                <span
+                  class="bg-[#E76F51] text-white px-3 py-1 rounded-full text-sm"
+                  >متقدم</span
+                >
+                <span class="text-[#E76F51] font-bold">12 أسبوع</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">السدو</h3>
+              <p class="text-gray-600 mb-4">
+                تعلم تقنيات السدو التقليدية مع الأستاذة نورة السالم
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-[#b53240] font-bold text-xl"
+                    >1,299 ر.س</span
+                  >
+                  <span class="text-gray-500 line-through mr-2">1,599 ر.س</span>
+                </div>
+                <button
+                  class="bg-[#b53240] text-white px-6 py-2 rounded-lg hover:bg-[#871a25] transition duration-300"
+                >
+                  سجل الآن
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- More Course Cards... -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16 geometric-pattern">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">فئات الدورات</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Category 1 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-[#b53240] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">الفخار</h3>
+            <p class="text-gray-600">15 دورة</p>
+          </div>
+
+          <!-- Category 2 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-[#b53240] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">الخط العربي</h3>
+            <p class="text-gray-600">12 دورة</p>
+          </div>
+
+          <!-- Category 3 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-[#b53240] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">السدو</h3>
+            <p class="text-gray-600">8 دورات</p>
+          </div>
+
+          <!-- Category 4 -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-[#b53240] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">صناعة العطور</h3>
+            <p class="text-gray-600">6 دورات</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">المدربون المتميزون</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Instructor 1 -->
+          <div
+            class="text-center hover:shadow-lg p-6 rounded-lg transition duration-300"
+          >
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/009/292/244/large_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+              alt="محمد العمري"
+              class="w-32 h-32 rounded-full mx-auto mb-4"
+            />
+            <h3 class="text-xl font-bold">محمد العمري</h3>
+            <p class="text-gray-600">خبير في صناعة الفخار</p>
+            <p class="text-[#b53240] mt-2">15+ سنة خبرة</p>
+            <div class="mt-4 flex justify-center gap-2">
+              <span
+                class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full"
+                >20+ دورة</span
+              >
+              <span
+                class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full"
+                >300+ متدرب</span
+              >
+            </div>
+          </div>
+
+          <!-- Instructor 2 -->
+          <div
+            class="text-center hover:shadow-lg p-6 rounded-lg transition duration-300"
+          >
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/009/292/244/large_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+              alt="نورة السالم"
+              class="w-32 h-32 rounded-full mx-auto mb-4"
+            />
+            <h3 class="text-xl font-bold">نورة السالم</h3>
+            <p class="text-gray-600">خبيرة في السدو</p>
+            <p class="text-[#b53240] mt-2">10+ سنة خبرة</p>
+            <div class="mt-4 flex justify-center gap-2">
+              <span
+                class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full"
+                >15+ دورة</span
+              >
+              <span
+                class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full"
+                >200+ متدرب</span
+              >
+            </div>
+          </div>
+
+          <!-- Instructor 3 -->
+          <div
+            class="text-center hover:shadow-lg p-6 rounded-lg transition duration-300"
+          >
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/009/292/244/large_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+              alt="أحمد الراشد"
+              class="w-32 h-32 rounded-full mx-auto mb-4"
+            />
+            <h3 class="text-xl font-bold">أحمد الراشد</h3>
+            <p class="text-gray-600">خبير في الخط العربي</p>
+            <p class="text-[#b53240] mt-2">12+ سنة خبرة</p>
+            <div class="mt-4 flex justify-center gap-2">
+              <span
+                class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full"
+                >18+ دورة</span
+              >
+              <span
+                class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full"
+                >250+ متدرب</span
+              >
+            </div>
+          </div>
+
+          <!-- Instructor 4 -->
+          <div
+            class="text-center hover:shadow-lg p-6 rounded-lg transition duration-300"
+          >
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/009/292/244/large_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+              alt="سارة العتيبي"
+              class="w-32 h-32 rounded-full mx-auto mb-4"
+            />
+            <h3 class="text-xl font-bold">سارة العتيبي</h3>
+            <p class="text-gray-600">خبيرة في صناعة العطور</p>
+            <p class="text-[#b53240] mt-2">8+ سنة خبرة</p>
+            <div class="mt-4 flex justify-center gap-2">
+              <span
+                class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full"
+                >10+ دورة</span
+              >
+              <span
+                class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full"
+                >150+ متدرب</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-[#264653] text-white py-16">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-6">ابدأ رحلة التعلم اليوم</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+          انضم إلى مجتمع الحرفيين واكتشف أسرار الحرف اليدوية التقليدية
+        </p>
+        <button
+          class="bg-[#E76F51] hover:bg-[#d65f42] text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+        >
+          سجل في دورة مجانية
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">فنّار</h3>
+            <p class="text-gray-400">
+              منصة لإحياء وتطوير الحرف اليدوية السعودية
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+      const mobileMenuClose = document.querySelector(".mobile-menu-close");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenuIcon.classList.toggle("hidden");
+        mobileMenuClose.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فنّار - منصة الحرف اليدوية السعودية</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Swiper.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <style>
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: var(--light) !important;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: var(--light) !important;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Announcement Bar -->
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="flex-shrink-0 flex items-center">
+              <span class="text-2xl font-bold text-gray-800 mr-3">فنّار</span>
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-700 hover:text-[#b53240]"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  class="mobile-menu-icon"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+                <path
+                  class="mobile-menu-close hidden"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Desktop menu -->
+          <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+            <a
+              href="/virtual-workshop.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md transition duration-300"
+              >المعمل الافتراضي</a
+            >
+            <a
+              href="/market.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md transition duration-300"
+              >سوق الحرفيين</a
+            >
+            <a
+              href="/courses.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md transition duration-300"
+              >الدورات</a
+            >
+            <a
+              href="/academies.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md transition duration-300"
+              >الأكاديميات</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="/virtual-workshop.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md transition duration-300"
+            >المعمل الافتراضي</a
+          >
+          <a
+            href="/market.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md transition duration-300"
+            >سوق الحرفيين</a
+          >
+          <a
+            href="/courses.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md transition duration-300"
+            >الدورات</a
+          >
+          <a
+            href="/academies.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md transition duration-300"
+            >الأكاديميات</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="swiper hero-swiper h-[600px] animate__animated animate__fadeIn">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide relative">
+          <img
+            src="https://images.unsplash.com/photo-1590959914819-b767b9fe4cfb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="الحرف اليدوية السعودية"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-black bg-opacity-40">
+            <div class="container mx-auto px-6 h-full flex items-center">
+              <div
+                class="text-white max-w-lg animate__animated animate__fadeInRight"
+              >
+                <h1 class="text-5xl font-bold mb-4">تراث لا ينضَب</h1>
+                <p class="text-xl mb-8">
+                  اكتشف جمال الحرف اليدوية السعودية التقليدية
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                  <a
+                    href="/market.html"
+                    class="bg-[#b53240] hover:bg-[#871a25] text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+                  >
+                    كُن حِرفي واشترك الآن
+                  </a>
+                  <a
+                    href="/courses.html"
+                    class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition duration-300"
+                  >
+                    تعلم الحرف
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide relative">
+          <img
+            src="/api/placeholder/1920/600"
+            alt="دورات الحرف اليدوية"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-black bg-opacity-40">
+            <div class="container mx-auto px-6 h-full flex items-center">
+              <div
+                class="text-white max-w-lg animate__animated animate__fadeInRight"
+              >
+                <h1 class="text-5xl font-bold mb-4">تعلم من الحرفيين</h1>
+                <p class="text-xl mb-8">
+                  دورات تدريبية مباشرة مع أمهر الحرفيين السعوديين
+                </p>
+                <a
+                  href="/courses.html"
+                  class="bg-[#E76F51] hover:bg-[#d65f42] text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+                >
+                  اكتشف الدورات
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- About Us Section (replacing Featured Categories) -->
+    <section
+      class="py-16 relative"
+      style="
+        background-image: url('aboutimage.jpeg');
+        background-position: center;
+        background-repeat: repeat;
+      "
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <h2 class="text-4xl font-bold text-center mb-12 text-white">
+          نبذة عنا
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Vision -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp"
+          >
+            <div
+              class="w-16 h-16 bg-[#b53240] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">فنار</h3>
+            <p class="text-gray-600">
+              “فنار” هو منصة رقمية مبتكرة تمكّن الحرفيين من تصميم وتطوير قطع
+              فنية يدوية باستخدام تقنيات متقدمة، مما يعزز الإبداع ويتيح محاكاة
+              القطع الفنية الحديثة بدقة.
+            </p>
+          </div>
+
+          <!-- Vision -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="w-16 h-16 bg-[#b53240] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">رؤية المنصة</h3>
+            <p class="text-gray-600">
+              أن نكون منصة رائدة لدمج الحرف اليدوية مع التقنيات الحديثة، وتمكين
+              الأفراد من تصميم قطع فنية مبتكرة في بيئة تعلم داعمة.
+            </p>
+          </div>
+
+          <!-- Mission -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="w-16 h-16 bg-[#b53240] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">رسالتنا</h3>
+            <p class="text-gray-600">
+              توفير منصة تعليمية وحرفية تتيح تصميم قطع فنية مبتكرة باستخدام
+              تقنيات رقمية، وتمكين الأفراد من تطوير مهاراتهم الفنية.
+            </p>
+          </div>
+
+          <!-- Values -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.6s"
+          >
+            <div
+              class="w-16 h-16 bg-[#b53240] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">قيمنا</h3>
+            <p class="text-gray-600">
+              1. الإبداع: تعزيز الابتكار في التصاميم.<br />
+              2. الجودة: ضمان الدقة والإتقان في الإنتاج.<br />
+              3. التمكين: دعم تطوير مهارات الأفراد.<br />
+              4. التعلم المستمر: تقديم فرص تعلم لتوسيع آفاق الحرفيين.
+            </p>
+          </div>
+
+          <!-- Goals -->
+          <div
+            class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition duration-300 animate__animated animate__fadeInUp"
+            style="animation-delay: 0.8s"
+          >
+            <div
+              class="w-16 h-16 bg-[#b53240] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">أهدافنا</h3>
+            <p class="text-gray-600">
+              1. تحفيز الإبداع: تطوير قطع فنية مبتكرة.<br />
+              2. توفير فرص تعليمية: تمكين الأفراد من تعلم مهارات جديدة.<br />
+              3. دعم التقنية: دمج تقنيات حديثة لتحسين الجودة.<br />
+              4. خلق فرص عمل: تطوير مهارات الأيدي العاملة في الحرف.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News & Events -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
+          آخر الأخبار والفعاليات
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Event 1 -->
+          <div
+            class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://www.alweeam.com.sa/wp-content/uploads/2025/02/%D9%81%D9%81%D9%81%D9%81.jpg"
+                alt="معرض الحرف"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-[#E76F51] text-white px-3 py-1 rounded-lg"
+              >
+                15-20 رمضان
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="text-[#b53240] text-sm font-bold">معرض</span>
+              <h3 class="text-xl font-bold mb-2">معرض الحرف التقليدية</h3>
+              <p class="text-gray-600 mb-4">
+                معرض سنوي يجمع أمهر الحرفيين في المملكة
+              </p>
+              <div class="flex items-center">
+                <svg
+                  class="w-5 h-5 text-gray-500 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <span class="text-gray-500">الرياض - واجهة الرياض</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div
+            class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://storage.googleapis.com/saudi-artisan-bucket/artisan_98e9dfed57/artisan_98e9dfed57.jpg"
+                alt="ورشة عمل"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-[#b53240] text-white px-3 py-1 rounded-lg"
+              >
+                كل أسبوع
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="text-[#b53240] text-sm font-bold">ورشة عمل</span>
+              <h3 class="text-xl font-bold mb-2">ورش عمل مفتوحة</h3>
+              <p class="text-gray-600 mb-4">
+                ورش تدريبية أسبوعية في مختلف الحرف اليدوية
+              </p>
+              <div class="flex items-center">
+                <svg
+                  class="w-5 h-5 text-gray-500 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <span class="text-gray-500">جدة - مركز الحرف التقليدية</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- News -->
+          <div
+            class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300"
+          >
+            <div class="relative">
+              <img
+                src="https://portalcdn.spa.gov.sa/backend/original/202405/irjyUG39fktQ3IVB37IqKCRVMBCLV2xVDJrME1ws.jpg"
+                alt="أخبار الحرف"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-[#E9C46A] text-gray-800 px-3 py-1 rounded-lg"
+              >
+                أخبار
+              </div>
+            </div>
+            <div class="p-6">
+              <span class="text-[#b53240] text-sm font-bold">مبادرة جديدة</span>
+              <h3 class="text-xl font-bold mb-2">دعم الحرفيين الشباب</h3>
+              <p class="text-gray-600 mb-4">
+                إطلاق برنامج لدعم وتمويل مشاريع الحرفيين الشباب
+              </p>
+              <div class="flex items-center">
+                <svg
+                  class="w-5 h-5 text-gray-500 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span class="text-gray-500">قبل 3 أيام</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="py-16 geometric-pattern">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
+          دورات مميزة
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Course 1 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeInUp"
+          >
+            <img
+              src="https://cdn.salla.sa/bNlyW/WtlUQNogzqgycBkcYTogIV8j7RhaA43hxcbhqtWM.jpg"
+              alt="دورة الفخار"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-4">
+                <span
+                  class="bg-[#E9C46A] text-gray-800 px-3 py-1 rounded-full text-sm"
+                  >مبتدئ</span
+                >
+                <span class="text-[#E76F51] font-bold">8 أسابيع</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">أساسيات صناعة الفخار</h3>
+              <p class="text-gray-600 mb-4">
+                تعلم أسس صناعة الفخار التقليدي مع الأستاذ محمد العمري
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-[#b53240] font-bold text-xl">799 ر.س</span>
+                  <span class="text-gray-500 line-through mr-2">999 ر.س</span>
+                </div>
+                <button
+                  class="bg-[#b53240] text-white px-6 py-2 rounded-lg hover:bg-[#871a25] transition duration-300"
+                >
+                  سجل الآن
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <img
+              src="https://i.ytimg.com/vi/uPlC-cJp4_8/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgTyhBMA8=&rs=AOn4CLDOVQGH44rIqS0QNYkJpDEyvtA2VQ"
+              alt="دورة النسيج"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-4">
+                <span
+                  class="bg-[#E76F51] text-white px-3 py-1 rounded-full text-sm"
+                  >متقدم</span
+                >
+                <span class="text-[#E76F51] font-bold">12 أسبوع</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">فن النسيج التقليدي</h3>
+              <p class="text-gray-600 mb-4">
+                تعلم تقنيات النسيج المتقدمة مع الأستاذة نورة السالم
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-[#b53240] font-bold text-xl"
+                    >1,299 ر.س</span
+                  >
+                  <span class="text-gray-500 line-through mr-2">1,599 ر.س</span>
+                </div>
+                <button
+                  class="bg-[#b53240] text-white px-6 py-2 rounded-lg hover:bg-[#871a25] transition duration-300"
+                >
+                  سجل الآن
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeInUp"
+            style="animation-delay: 0.4s"
+          >
+            <img
+              src="https://s3.amazonaws.com/tasmeemme.blog/497/16426283_1039721069465688_2576106671705132174_n.jpg"
+              alt="دورة الخط العربي"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-4">
+                <span
+                  class="bg-[#b53240] text-white px-3 py-1 rounded-full text-sm"
+                  >متوسط</span
+                >
+                <span class="text-[#E76F51] font-bold">6 أسابيع</span>
+              </div>
+              <h3 class="text-xl font-bold mb-2">خط الثلث: الأساسيات</h3>
+              <p class="text-gray-600 mb-4">
+                تعلم أصول خط الثلث مع الخطاط أحمد الراشد
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-[#b53240] font-bold text-xl">899 ر.س</span>
+                  <span class="text-gray-500 line-through mr-2">1,199 ر.س</span>
+                </div>
+                <button
+                  class="bg-[#b53240] text-white px-6 py-2 rounded-lg hover:bg-[#871a25] transition duration-300"
+                >
+                  سجل الآن
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View All Courses Button -->
+        <div class="text-center mt-12">
+          <a
+            href="/courses.html"
+            class="inline-block bg-white text-[#b53240] border-2 border-[#b53240] font-bold py-3 px-8 rounded-lg hover:bg-[#b53240] hover:text-white transition duration-300"
+          >
+            عرض جميع الدورات
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
+          آراء المتدربين
+        </h2>
+        <div class="swiper testimonials-swiper">
+          <div class="swiper-wrapper pb-12">
+            <!-- Testimonial 1 -->
+            <div class="swiper-slide">
+              <div class="bg-gray-50 rounded-lg p-8 shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="mr-4">
+                    <h4 class="font-bold text-lg">سارة المطيري</h4>
+                    <p class="text-gray-600">متدربة في دورة الفخار</p>
+                  </div>
+                </div>
+                <p class="text-gray-700">
+                  "تجربة رائعة غيرت نظرتي للحرف اليدوية التقليدية. المدربون
+                  محترفون والمحتوى عالي الجودة."
+                </p>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="swiper-slide">
+              <div class="bg-gray-50 rounded-lg p-8 shadow-lg">
+                <div class="flex items-center mb-4">
+                  <div class="mr-4">
+                    <h4 class="font-bold text-lg">خالد السعيد</h4>
+                    <p class="text-gray-600">متدرب في دورة الخط العربي</p>
+                  </div>
+                </div>
+                <p class="text-gray-700">
+                  "منصة فنّار فتحت لي آفاقاً جديدة في عالم الخط العربي. أنصح بها
+                  كل من يريد تعلم الحرف التقليدية."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">فنّار</h3>
+            <p class="text-gray-400">
+              منصة لإحياء وتطوير الحرف اليدوية السعودية
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Testimonials Swiper
+      const testimonialSwiper = new Swiper(".testimonials-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+      const mobileMenuClose = document.querySelector(".mobile-menu-close");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenuIcon.classList.toggle("hidden");
+        mobileMenuClose.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

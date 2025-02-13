@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المعمل الافتراضي - فنّار</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Add these scripts in the head section -->
+    <!-- After existing CSS links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="flex-shrink-0 flex items-center">
+              <span class="text-2xl font-bold text-gray-800 mr-3">فنّار</span>
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-700 hover:text-[#b53240]"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  class="mobile-menu-icon"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+                <path
+                  class="mobile-menu-close hidden"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Desktop menu -->
+          <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+            <a
+              href="/virtual-workshop.html"
+              class="text-[#b53240] font-bold px-3 py-2 rounded-md"
+              >المعمل الافتراضي</a
+            >
+            <a
+              href="/market.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+              >سوق الحرفيين</a
+            >
+            <a
+              href="/courses.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+              >الدورات</a
+            >
+            <a
+              href="/academies.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+              >الأكاديميات</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="/virtual-workshop.html"
+            class="block text-[#b53240] font-bold px-3 py-2 rounded-md"
+            >المعمل الافتراضي</a
+          >
+          <a
+            href="/market.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+            >سوق الحرفيين</a
+          >
+          <a
+            href="/courses.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+            >الدورات</a
+          >
+          <a
+            href="/academies.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+            >الأكاديميات</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-[#264653] text-white py-20">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="animate__animated animate__fadeInRight">
+            <h1 class="text-5xl font-bold mb-6">المعمل الافتراضي للفخار</h1>
+            <p class="text-xl mb-8 text-gray-300">
+              اكتشف فن صناعة الفخار التقليدي من خلال تجربة تفاعلية ثلاثية
+              الأبعاد
+            </p>
+            <button
+              class="bg-[#E76F51] hover:bg-[#d65f42] text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+            >
+              ابدأ التجربة
+            </button>
+          </div>
+          <div class="animate__animated animate__fadeInLeft">
+            <img
+              src="https://modo3.com/thumbs/fit630x300/260586/1643927134/%D9%81%D9%88%D8%A7%D8%A6%D8%AF_%D8%B5%D9%86%D8%A7%D8%B9%D8%A9_%D8%A7%D9%84%D9%81%D8%AE%D8%A7%D8%B1.jpg"
+              alt="معمل افتراضي"
+              class="rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          مميزات المعمل الافتراضي
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg text-center animate__animated animate__fadeInUp"
+          >
+            <h3 class="text-xl font-bold mb-4">تجربة تفاعلية</h3>
+            <p class="text-gray-600">
+              تحكم في العجلة وأدوات التشكيل بشكل تفاعلي كامل
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg text-center animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <h3 class="text-xl font-bold mb-4">إرشادات مباشرة</h3>
+            <p class="text-gray-600">
+              تعليمات وإرشادات خطوة بخطوة من حرفيين محترفين
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg text-center animate__animated animate__fadeInUp"
+            style="animation-delay: 0.4s"
+          >
+            <h3 class="text-xl font-bold mb-4">حفظ التقدم</h3>
+            <p class="text-gray-600">
+              احفظ عملك وتقدمك في أي وقت واستكمل لاحقاً
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Workshop -->
+    <section class="py-16 geometric-pattern">
+      <div class="container mx-auto px-6">
+        <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-3">
+            <!-- Controls Panel -->
+            <div class="p-6 border-b lg:border-l lg:border-b-0">
+              <h3 class="text-2xl font-bold mb-6">أدوات التحكم</h3>
+
+              <!-- Model Selection -->
+              <div class="mb-6">
+                <label class="block text-gray-700 font-bold mb-2"
+                  >النموذج</label
+                >
+                <div class="relative">
+                  <select
+                    class="w-full p-3 border rounded-lg appearance-none bg-white"
+                    onchange="changeModel(this.value)"
+                  >
+                    <option value="./pottery.glb" selected>إناء فخاري</option>
+                    <option value="./drawer.glb">الدرج</option>
+                  </select>
+                  <div
+                    class="absolute left-3 top-1/2 transform -translate-y-1/2"
+                  >
+                    <svg
+                      class="w-5 h-5 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="grid grid-cols-2 gap-4">
+                <button
+                  class="bg-[#b53240] text-white py-3 px-6 rounded-lg hover:bg-[#871a25] transition duration-300"
+                >
+                  حفظ العمل
+                </button>
+                <button
+                  class="border border-[#b53240] text-[#b53240] py-3 px-6 rounded-lg hover:bg-[#b53240] hover:text-white transition duration-300"
+                >
+                  إعادة ضبط
+                </button>
+              </div>
+            </div>
+
+            <!-- Main Workshop Area -->
+            <div class="col-span-2 p-6">
+              <div class="bg-gray-100 rounded-lg h-[500px] relative">
+                <!-- 3D Workspace -->
+                <div id="pottery-viewer" class="w-full h-full"></div>
+
+                <!-- Camera Controls -->
+                <div
+                  class="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg p-2"
+                >
+                  <div class="grid grid-cols-3 gap-2">
+                    <button
+                      class="p-2 hover:bg-gray-100 rounded"
+                      onclick="zoomOut()"
+                    >
+                      <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                    </button>
+                    <button
+                      class="p-2 hover:bg-gray-100 rounded"
+                      onclick="zoomIn()"
+                    >
+                      <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                    </button>
+                    <button
+                      class="p-2 hover:bg-gray-100 rounded"
+                      onclick="resetView()"
+                    >
+                      <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tutorial Steps -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">خطوات التعلم</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="relative">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <span
+                class="absolute -top-4 -right-4 w-12 h-12 bg-[#b53240] text-white rounded-full flex items-center justify-center text-xl font-bold"
+                >١</span
+              >
+              <h3 class="text-xl font-bold mb-4 mt-4">تجهيز الطين</h3>
+              <p class="text-gray-600">
+                تعلم كيفية اختيار وتجهيز الطين المناسب للعمل
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <span
+                class="absolute -top-4 -right-4 w-12 h-12 bg-[#b53240] text-white rounded-full flex items-center justify-center text-xl font-bold"
+                >٢</span
+              >
+              <h3 class="text-xl font-bold mb-4 mt-4">تشكيل القاعدة</h3>
+              <p class="text-gray-600">تعلم أساسيات تشكيل قاعدة متينة للقطعة</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <span
+                class="absolute -top-4 -right-4 w-12 ه-12 bg-[#b53240] text-white rounded-full flex items-center justify-center text-xl font-bold"
+                >٣</span
+              >
+              <h3 class="text-xl font-bold mb-4 mt-4">بناء الجدران</h3>
+              <p class="text-gray-600">تقنيات رفع وتشكيل جدران القطعة بدقة</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="relative">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <span
+                class="absolute -top-4 -right-4 w-12 ه-12 bg-[#b53240] text-white rounded-full flex items-center justify-center text-xl font-bold"
+                >٤</span
+              >
+              <h3 class="text-xl font-bold mb-4 mt-4">التشطيب</h3>
+              <p class="text-gray-600">
+                إضافة اللمسات النهائية والزخارف للقطعة
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-[#264653] text-white py-16">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-6">ابدأ رحلتك في عالم الفخار</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+          انضم إلينا اليوم واكتشف عالم الحرف اليدوية التقليدية من خلال تجربة
+          تفاعلية فريدة
+        </p>
+        <button
+          class="bg-[#E76F51] hover:bg-[#d65f42] text-white font-bold py-3 px-8 rounded-lg transition duration-300"
+        >
+          سجل مجاناً الآن
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">فنّار</h3>
+            <p class="text-gray-400">
+              منصة لإحياء وتطوير الحرف اليدوية السعودية
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Add before closing body tag -->
+    <script>
+      let scene, camera, renderer, model;
+      const container = document.getElementById("pottery-viewer");
+
+      function init() {
+        // Scene setup
+        scene = new THREE.Scene();
+
+        // Load background and ground textures
+        const textureLoader = new THREE.TextureLoader();
+
+        // Load background image
+        // const backgroundTexture = textureLoader.load(
+        //   "https://static.vecteezy.com/system/resources/previews/008/213/562/non_2x/modern-white-empty-loft-apartment-interior-living-room-hall-ace-panorama-full-360-panorama-in-equirectangular-spherical-projection-vr-content-photo.jpg"
+        // );
+        // scene.background = backgroundTexture;
+
+        // Load background color
+        scene.background = new THREE.Color(0xf0f0f0);
+
+        // Rest of init function remains the same
+        camera = new THREE.PerspectiveCamera(
+          75,
+          container.clientWidth / container.clientHeight,
+          0.1,
+          1000
+        );
+        camera.position.z = 8;
+        camera.position.y = 2;
+
+        // Renderer setup
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        container.appendChild(renderer.domElement);
+
+        // Lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(0, 10, 10);
+        scene.add(directionalLight);
+
+        // Load model
+        const loader = new THREE.GLTFLoader();
+        loader.load("./pottery.glb", function (gltf) {
+          model = gltf.scene;
+          scene.add(model);
+          model.rotation.y = Math.PI / 4;
+        });
+
+        animate();
+
+        // Handle window resize
+        window.addEventListener("resize", onWindowResize, false);
+      }
+
+      function changeModel(modelURL) {
+        // Remove the old model
+        if (model) {
+          scene.remove(model);
+          model = null;
+        }
+
+        // Load the new model
+        const loader = new THREE.GLTFLoader();
+        loader.load(modelURL, function (gltf) {
+          model = gltf.scene;
+          scene.add(model);
+          model.rotation.y = Math.PI / 4;
+
+          // Adjust position for the drawer model
+          if (modelURL === "./drawer.glb") {
+            model.position.y = -2; // Lower the drawer model
+          } else {
+            model.position.y = 0; // Reset position for other models
+          }
+        });
+      }
+
+      function animate() {
+        requestAnimationFrame(animate);
+        if (model) {
+          model.rotation.y += 0.005;
+          // move the background with the camera
+          // scene.background.offset.x += 0.001;
+        }
+        // Make the background follow the camera
+        renderer.render(scene, camera);
+      }
+
+      function onWindowResize() {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+      }
+
+      function zoomIn() {
+        camera.position.z = Math.max(camera.position.z - 0.5, 2);
+      }
+
+      function zoomOut() {
+        camera.position.z = Math.min(camera.position.z + 0.5, 10);
+      }
+
+      function resetView() {
+        camera.position.z = 8; // Increased z position
+        if (model) {
+          model.rotation.y = Math.PI / 4;
+        }
+      }
+
+      // Initialize 3D viewer
+      init();
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+      const mobileMenuClose = document.querySelector(".mobile-menu-close");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenuIcon.classList.toggle("hidden");
+        mobileMenuClose.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

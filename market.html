@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سوق الحرفيين - فنّار</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="flex-shrink-0 flex items-center">
+              <span class="text-2xl font-bold text-gray-800 mr-3">فنّار</span>
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-700 hover:text-[#b53240]"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  class="mobile-menu-icon"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+                <path
+                  class="mobile-menu-close hidden"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Desktop menu -->
+          <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+            <a
+              href="/virtual-workshop.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+              >المعمل الافتراضي</a
+            >
+            <a
+              href="/market.html"
+              class="text-[#b53240] font-bold px-3 py-2 rounded-md"
+              >سوق الحرفيين</a
+            >
+            <a
+              href="/courses.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+              >الدورات</a
+            >
+            <a
+              href="/academies.html"
+              class="text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+              >الأكاديميات</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="/virtual-workshop.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+            >المعمل الافتراضي</a
+          >
+          <a
+            href="/market.html"
+            class="block text-[#b53240] font-bold px-3 py-2 rounded-md"
+            >سوق الحرفيين</a
+          >
+          <a
+            href="/courses.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+            >الدورات</a
+          >
+          <a
+            href="/academies.html"
+            class="block text-gray-700 hover:text-[#b53240] px-3 py-2 rounded-md"
+            >الأكاديميات</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div
+      class="bg-[#264653] text-white py-16"
+      style="
+        background-image: url('https://pbs.twimg.com/media/Er7KjhpW8AAzLm-?format=jpg&name=large');
+        background-blend-mode: overlay;
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div class="container mx-auto px-6">
+        <h1
+          class="text-5xl font-bold mb-6 animate__animated animate__fadeInDown"
+        >
+          سوق الحرفيين
+        </h1>
+        <p
+          class="text-xl text-gray-300 mb-8 animate__animated animate__fadeInUp"
+        >
+          اكتشف وادعم الحرف اليدوية السعودية الأصيلة
+        </p>
+      </div>
+    </div>
+
+    <!-- Filters Section -->
+    <section class="py-8 border-b">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-wrap gap-4 items-center justify-between">
+          <!-- Categories -->
+          <div class="flex gap-2">
+            <button class="bg-[#b53240] text-white px-4 py-2 rounded-lg">
+              الكل
+            </button>
+            <button class="bg-white hover:bg-gray-100 px-4 py-2 rounded-lg">
+              الفخار
+            </button>
+            <button class="bg-white hover:bg-gray-100 px-4 py-2 rounded-lg">
+              النسيج
+            </button>
+            <button class="bg-white hover:bg-gray-100 px-4 py-2 rounded-lg">
+              الخشب
+            </button>
+          </div>
+
+          <!-- Sort -->
+          <select class="bg-white border rounded-lg px-4 py-2">
+            <option>الأحدث</option>
+            <option>الأكثر مبيعاً</option>
+            <option>السعر: من الأقل</option>
+            <option>السعر: من الأعلى</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <!-- Product Cards -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeIn"
+          >
+            <img
+              src="https://img.freepik.com/free-photo/closeup-shot-greek-vase-wooden-table_181624-20847.jpg?size=626&ext=jpg"
+              alt="إناء فخاري تقليدي"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold">إناء فخاري تقليدي</h3>
+                <span class="text-[#b53240] font-bold">٣٥٠ ر.س</span>
+              </div>
+              <p class="text-gray-600 mb-4">صناعة يدوية من الطين المحلي</p>
+              <div class="flex items-center justify-between">
+                <button
+                  class="bg-[#b53240] text-white px-4 py-2 rounded-lg hover:bg-[#871a25]"
+                >
+                  أضف للسلة
+                </button>
+                <div class="flex items-center">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/009/292/244/large_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+                    alt="الحرفي"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <span class="mr-2 text-gray-600">محمد العنزي</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeIn"
+          >
+            <img
+              src="https://img.freepik.com/free-photo/typical-mexican-carpet_1101-233.jpg"
+              alt="سجادة منسوجة يدوياً"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold">سجادة منسوجة يدوياً</h3>
+                <span class="text-[#b53240] font-bold">٧٥٠ ر.س</span>
+              </div>
+              <p class="text-gray-600 mb-4">نسيج تقليدي بألوان طبيعية</p>
+              <div class="flex items-center justify-between">
+                <button
+                  class="bg-[#b53240] text-white px-4 py-2 rounded-lg hover:bg-[#871a25]"
+                >
+                  أضف للسلة
+                </button>
+                <div class="flex items-center">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/009/292/244/large_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+                    alt="الحرفي"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <span class="mr-2 text-gray-600">نورة السالم</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeIn"
+          >
+            <img
+              src="https://img.freepik.com/premium-photo/envision-piece-middle-eastern-calligraphy-script-s-elegant-strokes-forming-captivating_950002-355568.jpg?ga=GA1.1.1099878185.1739370852&semt=ais_hybrid"
+              alt="لوحة خط عربي"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold">لوحة خط عربي</h3>
+                <span class="text-[#b53240] font-bold">٤٥٠ ر.س</span>
+              </div>
+              <p class="text-gray-600 mb-4">خط الثلث على ورق معالج يدوياً</p>
+              <div class="flex items-center justify-between">
+                <button
+                  class="bg-[#b53240] text-white px-4 py-2 rounded-lg hover:bg-[#871a25]"
+                >
+                  أضف للسلة
+                </button>
+                <div class="flex items-center">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/009/292/244/large_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+                    alt="الحرفي"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <span class="mr-2 text-gray-600">أحمد الراشد</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeIn"
+          >
+            <img
+              src="https://img.freepik.com/free-photo/beautiful-vintage-tableware-wooden-board_23-2148111705.jpg?t=st=1739371289~exp=1739374889~hmac=00338ab327d76e5ac6923b8b8fd0796a2b6ab7801b89a81618f5f96c7c4184e9&w=1380"
+              alt="مبخرة خشبية منقوشة"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold">مبخرة خشبية منقوشة</h3>
+                <span class="text-[#b53240] font-bold">٢٨٠ ر.س</span>
+              </div>
+              <p class="text-gray-600 mb-4">خشب الزان مع نقوش تقليدية</p>
+              <div class="flex items-center justify-between">
+                <button
+                  class="bg-[#b53240] text-white px-4 py-2 rounded-lg hover:bg-[#871a25]"
+                >
+                  أضف للسلة
+                </button>
+                <div class="flex items-center">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/009/292/244/large_2x/default-avatar-icon-of-social-media-user-vector.jpg"
+                    alt="الحرفي"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <span class="mr-2 text-gray-600">فهد القحطاني</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="py-8">
+      <div class="container mx-auto px-6">
+        <div class="flex justify-center gap-2">
+          <button class="px-4 py-2 rounded-lg bg-white hover:bg-gray-100">
+            السابق
+          </button>
+          <button class="px-4 py-2 rounded-lg bg-[#b53240] text-white">
+            ١
+          </button>
+          <button class="px-4 py-2 rounded-lg bg-white hover:bg-gray-100">
+            ٢
+          </button>
+          <button class="px-4 py-2 rounded-lg bg-white hover:bg-gray-100">
+            ٣
+          </button>
+          <button class="px-4 py-2 rounded-lg bg-white hover:bg-gray-100">
+            التالي
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">فنّار</h3>
+            <p class="text-gray-400">
+              منصة لإحياء وتطوير الحرف اليدوية السعودية
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+      const mobileMenuClose = document.querySelector(".mobile-menu-close");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenuIcon.classList.toggle("hidden");
+        mobileMenuClose.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
